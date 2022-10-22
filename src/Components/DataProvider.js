@@ -24,7 +24,7 @@ export const dataProvider = {
     };
     const url = `${apiUrl}/${resource}?${JSON.stringify(query)}`;
     return httpClient(url).then(({ headers, json }) => {
-     console.log(json," json...");
+     console.log(json.data," json...");
       return {
         data: json.data,
         total: json.data.length,
